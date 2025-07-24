@@ -65,4 +65,8 @@ o = Object.create({}, { p: { value: 42 } });
     + 数据描述符:用于定义属性的值和可写性。独有属性：1.value：设置属性的值，默认值 ：undefined；2.writable：控制属性值是否可以被修改，默认值：false
     + 存取描述符:用于定义 getter 和 setter 函数。独有属性：1.get：定义属性的 getter 函数，默认值：undefined；2.set：定义属性的 setter 函数，默认值：undefined
     + 共享描述符:两种描述符类型都可以使用的属性。1.enumerable：控制属性是否在枚举中显示，默认值：false；2.configurable：控制属性描述符是否可以被修改，以及属性是否可以被删除，默认值：false；
-    + 注意事项：1.同一属性不能同时使用数据描述符和存取描述符；2.
+    + 注意事项：1.同一属性不能同时使用数据描述符和存取描述符；
+11. ES6 规格将键值对（key-value map）的数据结构称为 Record，其中的每一组键值对称为 field。这就是说，一个 Record 由多个 field 组成，而每个 field 都包含一个键名（key）和一个键值（value）。
+    + ES6 规格大量使用[[Notation]]这种书写法，比如[[Value]]、[[Writable]]、[[Get]]、[[Set]]等等。它用来指代 field 的键名。
+    + 举例来说，obj是一个 Record，它有一个Prototype属性。ES6 规格不会写obj.Prototype，而是写obj.[[Prototype]]。一般来说，使用[[Notation]]这种书写法的属性，都是对象的内部属性。
+    + 所有的 JavaScript 函数都有一个内部属性[[Call]]，用来运行该函数。F.[[Call]](V, argumentsList)
