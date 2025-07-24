@@ -70,3 +70,10 @@ o = Object.create({}, { p: { value: 42 } });
     + ES6 规格大量使用[[Notation]]这种书写法，比如[[Value]]、[[Writable]]、[[Get]]、[[Set]]等等。它用来指代 field 的键名。
     + 举例来说，obj是一个 Record，它有一个Prototype属性。ES6 规格不会写obj.Prototype，而是写obj.[[Prototype]]。一般来说，使用[[Notation]]这种书写法的属性，都是对象的内部属性。
     + 所有的 JavaScript 函数都有一个内部属性[[Call]]，用来运行该函数。F.[[Call]](V, argumentsList)
+12. 每一个语句都会返回一个 Completion Record，表示运行结果。每个 Completion Record 有一个[[Type]]属性，表示运行结果的类型。[[Type]]属性有五种可能的值。
+    + normal
+    + return
+    + throw
+    + break
+    + continue
+   如果[[Type]]的值是normal，就称为 normal completion，表示运行正常。其他的值，都称为 abrupt completion。其中，开发者只需要关注[[Type]]为throw的情况，即运行出错；break、continue、return这三个值都只出现在特定场景，可以不用考虑。
