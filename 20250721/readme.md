@@ -28,6 +28,7 @@
    + 结构：Object.create(proto, propertiesObject)
    + proto：新创建对象的原型对象。
    + propertiesObject：如果该参数被指定且不为 undefined，则该传入对象可枚举的自有属性将为新创建的对象添加具有对应属性名称的属性描述符。这些属性对应于 Object.defineProperties() 的第二个参数。
+   + 默认情况下，属性是不可写、可枚举和可配置的。
 ```javascript
        o = {};
 // 等价于：
