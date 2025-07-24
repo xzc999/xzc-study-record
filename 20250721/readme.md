@@ -76,4 +76,4 @@ o = Object.create({}, { p: { value: 42 } });
     + throw
     + break
     + continue
-   如果[[Type]]的值是normal，就称为 normal completion，表示运行正常。其他的值，都称为 abrupt completion。其中，开发者只需要关注[[Type]]为throw的情况，即运行出错；break、continue、return这三个值都只出现在特定场景，可以不用考虑。
+如果[[Type]]的值是normal，就称为 normal completion，表示运行正常。其他的值，都称为 abrupt completion。其中，开发者只需要关注[[Type]]为throw的情况，即运行出错；break、continue、return这三个值都只出现在特定场景，可以不用考虑。
